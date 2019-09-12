@@ -7,16 +7,17 @@
   <body>
     <h1>Change Calculator</h1>
     <!-- Write your markup here -->
-    <input id="amount-due" type="text">
-    <input id="amount-received" type="text">
-    <button id="calculate-change">Calculate</button>
-    <p id="dollars-output"></p>
-    <p id="quarters-output"></p>
-    <p id="dimes-output"></p>
-    <p id="nickels-output"></p>
-    <p id="pennies-output"></p>
+    <input id="amount-due" type="text" placeholder="Charge"></input>
+    <input id="amount-received" type="text" placeholder="Tender"></input>
+    <button id="calculate-change" onclick="clickEventHandler()">Calculate</button>
+    <p id="output"></p>
+    <p id="dollars-output">Dollars:</p>
+    <p id="quarters-output">Quarters:</p>
+    <p id="dimes-output">Dimes:</p>
+    <p id="nickels-output">Nickels:</p>
+    <p id="pennies-output">Pennies:</p>
 
     <!-- Don't forget to add your <script> tag here -->
-
+        <script src="main.js" charset="utf-8"></script>
   </body>
 </html>

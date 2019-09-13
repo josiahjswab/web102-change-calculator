@@ -13,31 +13,30 @@ function clickEventHandler() {
     var charge = document.getElementById('amount-due').value;
     var tender = document.getElementById('amount-received').value;
     var change = (tender - charge).toFixed(2);
-    document.getElementById('output').innerText = change; //this will not be in final product.
     return change;
 }
 
 function calculateChange() {
-    clickEventHandler();
-    var dollars = Math.floor(change/1);
+
+    var dollars = Math.floor(clickEventHandler());
+    change = (clickEventHandler() - dollars).toFixed(2) * 100;
     var change = change * 1.00;
-
+    
     var quarters = Math.floor(change/25);
-    var change = change%.25;
+    change -= (quarters * 25);
 
-    // var dimes = Math.floor(change/10);
-    // var change = change%.10;
-    // var nickels = Math.floor(change/05);
-    // var change = change%.05;
-    // var pennies = Math.floor(change/01);
-    // var change = change*.01;
+    var dimes = Math.floor(change/10);
+    change -= (dimes * 10)
 
-    console.log(dollars);
-    console.log(quarters);
+    var nickels = Math.floor(change/5);
+    change -= (nickels * 5);
+
+    var pennies = Math.floor(change/1);
+
 
     document.getElementById('dollars-output').innerHTML = 'Dollars:' + dollars;
     document.getElementById('quarters-output').innerHTML = 'Quarters' + quarters;
     document.getElementById('dimes-output').innerHTML = 'Dimes:' + dimes;
     document.getElementById('nickels-output').innerHTML = 'Nickels:' + nickels;
-    document.getElementById('pennies-output').innertext = 'Pennies:' + pennies;
+    document.getElementById('pennies-output').innerHTML = 'Pennies:' + pennies;
 }

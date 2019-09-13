@@ -34,9 +34,11 @@ function calculateChange() {
     var pennies = Math.floor(change/1);
 
 
-    document.getElementById('dollars-output').innerHTML = 'Dollars:' + dollars;
-    document.getElementById('quarters-output').innerHTML = 'Quarters' + quarters;
-    document.getElementById('dimes-output').innerHTML = 'Dimes:' + dimes;
-    document.getElementById('nickels-output').innerHTML = 'Nickels:' + nickels;
-    document.getElementById('pennies-output').innerHTML = 'Pennies:' + pennies;
+    document.getElementById('dollars-output').innerHTML = dollars;
+    document.getElementById('quarters-output').innerHTML = quarters;
+    document.getElementById('dimes-output').innerHTML = dimes;
+    document.getElementById('nickels-output').innerHTML = nickels;
+    document.getElementById('pennies-output').innerHTML = pennies;
+
+
 }

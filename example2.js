@@ -17,15 +17,15 @@ var dollars,
         console.log("Hey, you owe "+change+" more than this");
     }
     else console.log("Your change is: " + parseFloat(change).toFixed(2));
-
+    
     dollars=Math.floor(change/1.00);
-    var change=change%1.00;
+    change=change%1.00;
     quarters=Math.floor(change/.25);
-    var change=change%.25;
+    change=change%.25;
     dimes=Math.floor(change/.10);
-    var change=change%.10;
+    change=change%.10;
     nickels=Math.floor(change/.05);
-    var change=change%.05;
+    change=change%.05;
     pennies=(change*100).toFixed(0);
     // from my understanding the change=change% is changing the change variables definition as you go down the list.
     // I added the var before change=change% and nothing has changed for functionality in the browser so I imagine the var tag isn't event necessary.

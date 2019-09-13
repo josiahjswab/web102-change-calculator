@@ -6,7 +6,7 @@ function clickEventHandler(){
     var amountReceived = document.getElementById('amount-received').value;
     //variable that grabs calculated amount and assigns value of new amount
     var dollars = Math.floor(calculateChange());
-    var remainder = ((calculateChange() - dollars).toFixed(2)) * 100;
+    remainder = ((calculateChange() - dollars).toFixed(2)) * 100;
     var quarters = Math.floor(remainder/25);
     remainder -= (quarters * 25);
     var dimes = Math.floor(remainder/10);

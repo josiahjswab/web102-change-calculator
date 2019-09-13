@@ -18,23 +18,26 @@ function clickEventHandler() {
 }
 
 function calculateChange() {
+    clickEventHandler();
+    var dollars = Math.floor(change/1);
+    var change = change * 1.00;
 
-    var dollars = Math.floor(clickEventHandler());
-    var change = change%1.00;
-    var quarters = Math.floor(change/.25);
+    var quarters = Math.floor(change/25);
     var change = change%.25;
-    var dimes = Math.floor(change/.10);
-    var change = change%.10;
-    var nickels = Math.floor(change/.05);
-    var change = change%.05;
-    var pennies = Math.floor(change/.01);
-    var change = change*100;
+
+    // var dimes = Math.floor(change/10);
+    // var change = change%.10;
+    // var nickels = Math.floor(change/05);
+    // var change = change%.05;
+    // var pennies = Math.floor(change/01);
+    // var change = change*.01;
+
+    console.log(dollars);
+    console.log(quarters);
 
     document.getElementById('dollars-output').innerHTML = 'Dollars:' + dollars;
-    document.getElementById('quarters-output').innerHTML = quarters;
+    document.getElementById('quarters-output').innerHTML = 'Quarters' + quarters;
     document.getElementById('dimes-output').innerHTML = 'Dimes:' + dimes;
     document.getElementById('nickels-output').innerHTML = 'Nickels:' + nickels;
     document.getElementById('pennies-output').innertext = 'Pennies:' + pennies;
-
-
 }

@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Change Calculator</title>
-  </head>
-  <body>
-    <h1>Change Calculator</h1>
-    <!-- Write your markup here -->
-    <input id="amount-due" type="text" placeholder="Charge"></input>
-    <input id="amount-received" type="text" placeholder="Tender"></input>
-    <button id="calculate-change" onclick="calculateChange()">Calculate</button>
-    <p id="dollars-output">Dollars:</p>
-    <p id="quarters-output">Quarters:</p>
-    <p id="dimes-output">Dimes:</p>
-    <p id="nickels-output">Nickels:</p>
-    <p id="pennies-output">Pennies:</p>
 
-    <!-- Don't forget to add your <script> tag here -->
-        <script src="main.js" charset="utf-8"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Change Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="flex-grid">
+  <div class="flex-row">
+  <h1>Change Calculator</h1>
+  <h3 class="col"></h3>
+  <!-- Write your markup here -->
+    <input class="input" id="amount-due" type="text" placeholder="Total Due"></input>
+    <input class="input" id="amount-received" type="text" placeholder="Tender"></input>
+    <button class="button" id="calculate-change" onclick="calculateChange()">Calculate</button>
+  </div>
+
+  <div class="flex-row">
+    <h3>Change:</h3>
+    <p id="output">0.00</p>
+  </div>
+  <div class="flex-row">
+    <p>Dollars:</p>
+    <p class="col" id="dollars-output">0</p>
+    <p>Quarters:</p>
+    <p class="col" id="quarters-output">0</p>
+    <p>Dimes:</p>
+    <p class="col" id="dimes-output">0</p>
+    <p>Nickels:</p>
+    <p class="col" id="nickels-output">0</p>
+    <p>Pennies:</p>
+    <p class="col" id="pennies-output">0</p>
+  </div>
+  <!-- Don't forget to add your <script> tag here -->
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
 </html>
 <!--  -->

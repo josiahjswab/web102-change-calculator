@@ -13,6 +13,7 @@ function clickEventHandler() {
     var charge = document.getElementById('amount-due').value;
     var tender = document.getElementById('amount-received').value;
     var change = (tender - charge).toFixed(2);
+    document.getElementById('output').innerHTML = change
     return change;
 }
 
@@ -20,7 +21,6 @@ function calculateChange() {
 
     var dollars = Math.floor(clickEventHandler());
     change = (clickEventHandler() - dollars).toFixed(2) * 100;
-    var change = change * 1.00;
     
     var quarters = Math.floor(change/25);
     change -= (quarters * 25);
